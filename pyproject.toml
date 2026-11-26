@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "korean-emotion-tts"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+description = "A step-by-step Korean emotional FastSpeech2 implementation"
+dependencies = ["numpy==1.26.4", "scipy==1.13.1", "librosa==0.10.2.post1", "soundfile==0.12.1", "pyworld==0.3.5", "praatio==6.2.0", "matplotlib==3.9.2"]
+
+[project.scripts]
+ketts = "korean_emotion_tts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
